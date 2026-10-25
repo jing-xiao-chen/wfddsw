@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    崂山区育才学校七年级3班官网
+    <!-- 引入Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入Font Awesome图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- 配置Tailwind自定义颜色 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6',
+                        secondary: '#10b981',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            }
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- 导航栏 -->
+    <nav id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 py-4">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="flex justify-between items-center">
+                <a href="#home" class="text-2xl font-bold text-white text-shadow transition-colors duration-300" id="nav-logo">
+                    <i class="fas fa-graduation-cap mr-2"></i>七年级3班
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-white hover:text-blue-200 transition-colors nav-link">首页</a>
+                    <a href="#about" class="text-white hover:text-blue-200 transition-colors nav-link">班级简介</a>
+                    <a href="#teachers" class="text-white hover:text-blue-200 transition-colors nav-link">师生风采</a>
+                    <a href="#activities" class="text-white hover:text-blue-200 transition-colors nav-link">班级活动</a>
+                    <a href="#honors" class="text-white hover:text-blue-200 transition-colors nav-link">荣誉展示</a>
+                </div>
+                <!-- 移动端菜单按钮 -->
+                <button id="menu-btn" class="md:hidden text-white text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <!-- 移动端菜单 -->
+            <div id="mobile-menu" class="md:hidden hidden mt-4 bg-white rounded-lg shadow-lg p-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="#home" class="text-gray-800 hover:text-primary transition-colors">首页</a>
+                    <a href="#about" class="text-gray-800 hover:text-primary transition-colors">班级简介</a>
+                    <a href="#teachers" class="text-gray-800 hover:text-primary transition-colors">师生风采</a>
+                    <a href="#activities" class="text-gray-800 hover:text-primary transition-colors">班级活动</a>
+                    <a href="#honors" class="text-gray-800 hover:text-primary transition-colors">荣誉展示</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 首页Banner -->
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="c:\Users\jinle\Desktop\images\2_li.jpg.jpg" alt="教室背景" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/40"></div>
+        </div>
+        <div class="relative z-10 text-center px-4">
+            <h1 class="text-[clamp(2.5rem,5vw,4rem)] font-bold text-white mb-4 text-shadow">
+                七年级3班
+            </h1>
+            <p class="text-[clamp(1.2rem,2vw,1.5rem)] text-white/90 mb-8 max-w-2xl mx-auto text-shadow">
+                青春无畏，逐梦前行 | 我们是一个团结、奋进、温暖的集体
+            </p>
+            <a href="#about" class="inline-block bg-primary hover:bg-primary/90 text-white font-medium px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg">
+                了解我们 <i class="fas fa-arrow-down ml-2"></i>
+            </a>
+        </div>
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-white text-2xl"></i>
+        </div>
+    </section>
+
+    <!-- 班级简介 -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-gray-800 mb-4">班级简介</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-6">我们的班级</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        七年级3班是一个由45名朝气蓬勃的同学组成的温暖集体，在班主任王老师的带领下，我们共同学习、共同成长，营造了"团结、奋进、求实、创新"的良好班风。
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        在这里，每一位同学都能找到自己的闪光点，我们互相帮助、互相鼓励，在学习的道路上携手前行，在活动中共同收获成长与快乐。
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <div class="text-3xl font-bold text-primary mb-1">45</div>
+                            <div class="text-gray-600">班级人数</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <div class="text-3xl font-bold text-primary mb-1">2</div>
+                            <div class="text-gray-600">获奖次数</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <div class="text-3xl font-bold text-primary mb-1">8</div>
+                            <div class="text-gray-600">任课老师</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <div class="text-3xl font-bold text-primary mb-1">100%</div>
+                            <div class="text-gray-600">参与度</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="c:\Users\jinle\Desktop\images\5_li.jpg.jpg" alt="班级集体照" class="rounded-xl shadow-xl w-full">
+                    <div class="absolute -bottom-6 -left-6 bg-primary text-white p-4 rounded-lg shadow-lg">
+                        <p class="font-medium">班级口号：三七少年，气宇轩昂，乘风破浪，共创辉煌</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 师生风采 -->
+    <section id="teachers" class="py-20 bg-white">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-gray-800 mb-4">师生风采</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+                <p class="text-gray-600 mt-4">良师益友，伴我们成长</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- 班主任 -->
+                <div class="bg-gray-50 rounded-xl p-6 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-2">
+                    <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
+                        <img src="c:\Users\jinle\Desktop\images\teacher_li.jng.png" alt="王老师" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-1">王老师</h3>
+                    <p class="text-primary font-medium mb-2">班主任 / 英语老师</p>
+                    <p class="text-gray-600 text-sm">温柔耐心，是我们的良师益友</p>
+                </div>
+                <!-- 数学老师 -->
+                <div class="bg-gray-50 rounded-xl p-6 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-2">
+                    <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
+                        <img src="c:\Users\jinle\Desktop\images\2teacher_li.png.png" alt="数学老师" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-1">数学老师</h3>
+                    <p class="text-primary font-medium mb-2">数学老师</p>
+                    <p class="text-gray-600 text-sm">逻辑清晰，课堂生动有趣，深受同学喜爱</p>
+                </div>
+                <!-- 语文老师 -->
+                <div class="bg-gray-50 rounded-xl p-6 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-2">
+                    <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
+                        <img src="c:\Users\jinle\Desktop\images\3teacher_li.jpg.jpg" alt="语文老师" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-1">语文老师</h3>
+                    <p class="text-primary font-medium mb-2">语文老师</p>
+                    <p class="text-gray-600 text-sm">口语流利，带领我们感受语言的魅力</p>
+                </div>
+                <!-- 级部主任 -->
+                <div class="bg-gray-50 rounded-xl p-6 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-2">
+                    <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
+                        <img src="c:\Users\jinle\Desktop\images\4teacher_li.jpg.jpg" alt="李老师" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-1">李老师</h3>
+                    <p class="text-primary font-medium mb-2">级部主任</p>
+                    <p class="text-gray-600 text-sm">活力满满，带领我们锻炼身体，增强体魄</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 班级活动 -->
+    <section id="activities" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-gray-800 mb-4">班级活动</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+                <p class="text-gray-600 mt-4">记录我们的美好瞬间</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 运动会 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                    <div class="h-48 overflow-hidden">
+                        <img src="c:\Users\jinle\Desktop\images\3_li.jpg.jpg" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">秋季运动会</h3>
+                        <p class="text-gray-600">运动会上，我们齐心协力，在男子接力赛中获得了年级第5名的好成绩，展现了我们的团队精神！</p>
+                        <div class="mt-4 text-primary text-sm">
+                            <i class="far fa-calendar-alt mr-1"></i> 2026年10月
+                        </div>
+                    </div>
+                </div>
+                <!-- 日常活动 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                    <div class="h-48 overflow-hidden">
+                        <img src="c:\Users\jinle\Desktop\images\1_li.jpg.jpg" alt="班级日常活动" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2"></h3>
+                        <p class="text-gray-600">班级日常活动，我们一起完成了团队挑战，增进了彼此的信任与默契，收获了满满的友谊。</p>
+                        <div class="mt-4 text-primary text-sm">
+                            <i class="far fa-calendar-alt mr-1"></i> 2026年
+                        </div>
+                    </div>
+                </div>
+                <!-- 校园吉尼斯挑战赛 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                    <div class="h-48 overflow-hidden">
+                        <img src="c:\Users\jinle\Desktop\images\4_li.jpg.jpg" alt="校园吉尼斯挑战赛" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2"></h3>
+                        <p class="text-gray-600">校园吉尼斯挑战赛，我们探索体育的奥秘，在实践中学习，在体验中成长，收获了课本之外的知识。</p>
+                        <div class="mt-4 text-primary text-sm">
+                            <i class="far fa-calendar-alt mr-1"></i> 2026年11月
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 荣誉展示 -->
+    <section id="honors" class="py-20 bg-white">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-gray-800 mb-4">荣誉展示</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+                <p class="text-gray-600 mt-4">我们共同努力的成果</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-gray-50 rounded-xl p-6 text-center transition-all duration-300 hover:shadow-lg">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
+                        <i class="fas fa-trophy text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">文明班级</h3>
+                    <p class="text-gray-600 text-sm">2026年第一学期</p>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-6 text-center transition-all duration-300 hover:shadow-lg">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
+                        <i class="fas fa-medal text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">运动会团体二等奖</h3>
+                    <p class="text-gray-600 text-sm">2026年秋季运动会</p>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-6 text-center transition-all duration-300 hover:shadow-lg">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
+                        <i class="fas fa-paint-brush text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">黑板报评比一等奖</h3>
+                    <p class="text-gray-600 text-sm">2026年10月</p>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-6 text-center transition-all duration-300 hover:shadow-lg">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
+                        <i class="fas fa-book text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">读书活动优秀班级</h3>
+                    <p class="text-gray-600 text-sm">2026年10月</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center">
+                <h3 class="text-2xl font-bold mb-4">七年级3班</h3>
+                <p class="text-gray-400 mb-6">青春无畏，逐梦前行，我们一起成长</p>
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="javascript:alert('联系邮箱：wocnm_0532@qq.com')" class="text-gray-400 hover:text-white transition-colors">
+    <i class="fas fa-envelope text-xl"></i>
+</a>
+                   <a href="javascript:alert('联系电话：18953297673')" class="text-gray-400 hover:text-white transition-colors">
+    <i class="fas fa-phone text-xl"></i>
+</a>
+                    <a href="javascript:alert('班级地址：青岛市崂山区育才学校七年级3班（初中部3楼）')" class="text-gray-400 hover:text-white transition-colors">
+    <i class="fas fa-map-marker-alt text-xl"></i>
+</a>
+                </div>
+                <div class="border-t border-gray-700 pt-6">
+                    <p class="text-gray-400 text-sm">© 2026 七年级3班 版权所有   金晓辰做</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 导航栏滚动效果
+        const navbar = document.getElementById('navbar');
+        const navLogo = document.getElementById('nav-logo');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-white', 'shadow-md', 'py-2');
+                navbar.classList.remove('py-4');
+                navLogo.classList.remove('text-white', 'text-shadow');
+                navLogo.classList.add('text-primary');
+                navLinks.forEach(link => {
+                    link.classList.remove('text-white');
+                    link.classList.add('text-gray-800');
+                });
+            } else {
+                navbar.classList.remove('bg-white', 'shadow-md', 'py-2');
+                navbar.classList.add('py-4');
+                navLogo.classList.add('text-white', 'text-shadow');
+                navLogo.classList.remove('text-primary');
+                navLinks.forEach(link => {
+                    link.classList.add('text-white');
+                    link.classList.remove('text-gray-800');
+                });
+            }
+        });
+
+        // 移动端菜单
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    // 关闭移动端菜单
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
